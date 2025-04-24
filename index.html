@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PowerPoint Online Viewer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>PowerPoint Online Viewer</h1>
+            <p>Upload your PowerPoint file to view it in your browser</p>
+        </header>
+
+        <div class="upload-container">
+            <div class="drop-area" id="dropArea">
+                <img src="assets/upload-icon.svg" alt="Upload" class="upload-icon">
+                <p>Drag & drop PowerPoint file here</p>
+                <p class="small">or</p>
+                <input type="file" id="fileInput" accept=".ppt,.pptx">
+                <label for="fileInput" class="btn">Select File</label>
+            </div>
+            <div class="status" id="status"></div>
+        </div>
+
+        <div class="viewer-container" id="viewerContainer">
+            <iframe id="officeFrame" allowfullscreen></iframe>
+            <div class="controls">
+                <button id="fullscreenBtn" class="btn">Fullscreen</button>
+                <button id="downloadBtn" class="btn">Download</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
